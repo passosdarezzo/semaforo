@@ -1,0 +1,55 @@
+.luz {
+  position: relative;
+  margin: 16px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: repeating-linear-gradient(#333, #443 5px);
+  cursor: pointer;
+}
+
+.light-red {
+  animation-name: lightUpRed;
+}
+
+.light-yellow {
+  animation-name: lightUpYellow;
+}
+
+.light-green {
+  animation-name: lightUpGreen;
+}
+
+@keyframes lightUpRed {
+  0% {
+    background: repeating-linear-gradient(#f00, #e00 5px);
+    box-shadow: 0 0 40px #f00;
+    z-index: 1;
+  }
+  35% {
+    background: repeating-linear-gradient(#443, #333 5px);
+    box-shadow: none;
+    z-index: 0;
+  }
+}
+
+@keyframes lightUpYellow {
+  80% {
+    background: repeating-linear-gradient(#fd0, #ec0 5px);
+    box-shadow: 0 0 40px #fd0;
+    z-index: 1;
+  }
+}
+
+@keyframes lightUpGreen {
+  35% {
+    background: repeating-linear-gradient(#0d0, #0c0 5px);
+    box-shadow: 0 0 40px #0d0;
+    z-index: 1;
+  }
+  80% {
+    background: repeating-linear-gradient(#443, #333 5px);
+    box-shadow: none;
+    z-index: 0;
+  }
+}
